@@ -769,231 +769,105 @@
 
 
 
-
-   <!-- Contact Section (Form only, no phone/map/location) -->
+<!-- Contact Section (Form only, finalized & production-ready) -->
 <section id="contact" class="section-padding bg-white">
     <div class="container" data-aos="fade-up">
         <div class="bg-white rounded-4xl shadow-custom-2xl overflow-hidden">
             
-            <!-- Form Block -->
             <div class="p-4 p-lg-5 d-flex flex-column justify-content-center">
                 <div class="mb-5">
                     <h2 class="fw-bold text-slate-900 mb-2 h2">Get in Touch</h2>
                     <p class="text-slate-500">Send a message for invitations or scholarly inquiries.</p>
                 </div>
 
-<!-- Success + error messages (hidden by default) -->
-<div id="contactSuccess" class="alert alert-success d-none" role="alert">
-    Your message has been sent successfully. We will get back to you soon, in shā’ Allāh.
-</div>
+                <form action="https://formsubmit.co/bilalshajamali@gmail.com" method="POST">
+                    
+                    <!-- FormSubmit settings -->
+                    <input type="hidden" name="_subject" value="New Message from Bilalsha Website">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+                    <input type="hidden" name="_autoresponse"
+                        value="Thank you for your message. I will get back to you soon, In shaa Allah.">
 
-<div id="contactError" class="alert alert-danger d-none" role="alert">
-    Something went wrong. Please try again later or email directly:
-    <a href="mailto:bilalshajamali@gmail.com" class="alert-link">bilalshajamali@gmail.com</a>.
-</div>
+                    <!-- Anti-spam honeypot -->
+                    <input type="text" name="_honey" style="display:none">
 
-<!-- Contact form (AJAX submit, no action attribute) -->
-<form id="contactForm" method="POST">
-    <!-- FormSubmit config (these fields are still sent to FormSubmit) -->
-    <input type="hidden" name="_subject" value="New Message from Bilalsha Website">
-    <input type="hidden" name="_template" value="table">
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label fw-medium text-slate-700 small">Your Name</label>
+                            <input type="text" name="name" class="contact-input" placeholder="Name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-medium text-slate-700 small">Your Email</label>
+                            <input type="email" name="email" class="contact-input" placeholder="Email" required>
+                        </div>
+                    </div>
 
-    <!-- OPTIONAL: anti‑bot honeypot -->
-    <input type="text" name="_honey" style="display:none">
+                    <div class="mb-3">
+                        <label class="form-label fw-medium text-slate-700 small">Subject</label>
+                        <input type="text" name="subject" class="contact-input" placeholder="Subject" required>
+                    </div>
 
-    <div class="row g-3 mb-3">
-        <div class="col-md-6">
-            <label for="name" class="form-label fw-medium text-slate-700 small">Your Name</label>
-            <input type="text" name="name" id="name" class="contact-input" placeholder="Name" required>
-        </div>
-        <div class="col-md-6">
-            <label for="email" class="form-label fw-medium text-slate-700 small">Your Email</label>
-            <input type="email" name="email" id="email" class="contact-input" placeholder="Email" required>
-        </div>
-    </div>
-    
-    <div class="mb-3">
-        <label for="subject" class="form-label fw-medium text-slate-700 small">Subject</label>
-        <input type="text" name="subject" id="subject" class="contact-input" placeholder="Subject" required>
-    </div>
-    
-    <div class="mb-4">
-        <label for="message" class="form-label fw-medium text-slate-700 small">Message</label>
-        <textarea name="message" id="message" rows="4" class="contact-input" placeholder="Message" required></textarea>
-    </div>
+                    <div class="mb-4">
+                        <label class="form-label fw-medium text-slate-700 small">Message</label>
+                        <textarea name="message" rows="4" class="contact-input" placeholder="Message" required></textarea>
+                    </div>
 
-    <div class="d-flex justify-content-center justify-content-md-end mt-2">
-        <button type="submit" class="btn contact-submit-btn">
-            Send Message
-            <i class="bi bi-send"></i>
-        </button>
-    </div>
-</form>
-
-
-
-                
+                    <div class="d-flex justify-content-md-end">
+                        <button type="submit" class="btn contact-submit-btn">
+                            Send Message <i class="bi bi-send"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
 
         </div>
     </div>
 </section>
 
-    
+<!-- Footer -->
+<footer class="bg-slate-50 py-5 border-top border-slate-200">
+    <div class="container text-center">
+        <h3 class="fw-bold text-slate-800 mb-3">Bilalsha J. N. Tanur</h3>
+        <p class="text-slate-500 mx-auto mb-4" style="max-width:500px;">
+            Dedicated to spreading authentic Islamic knowledge, fostering reasoned dialogue, and spiritual purification.
+        </p>
 
-
-
-
-    <!-- Footer -->
-    <footer class="bg-slate-50 py-5 border-top border-slate-200">
-        <div class="container text-center">
-            <h3 class="fw-bold text-slate-800 mb-3">Bilalsha J. N. Tanur</h3>
-            <p class="text-slate-500 mx-auto mb-4" style="max-width: 500px;">
-                Dedicated to spreading authentic Islamic knowledge, fostering reasoned dialogue, and spiritual purification.
-            </p>
-
-            <div class="d-flex justify-content-center gap-3 mb-4">
-                <a href="#" class="social-link yt"><i class="bi bi-youtube"></i></a>
-                <a href="#" class="social-link fb"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="social-link ig"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="social-link tw"><i class="bi bi-twitter-x"></i></a>
-            </div>
-
-            <div class="text-slate-400 small pt-4 border-top border-slate-200">
-                &copy; 2024 <strong>Bilalsha Tanur</strong>. All Rights Reserved.
-            </div>
+        <div class="d-flex justify-content-center gap-3 mb-4">
+            <a href="#" class="social-link yt"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="social-link fb"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link ig"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-link tw"><i class="bi bi-twitter-x"></i></a>
         </div>
-    </footer>
 
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- AOS Animation JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false
-        });
+        <div class="text-slate-400 small pt-4 border-top border-slate-200">
+            &copy; 2024 <strong>Bilalsha Tanur</strong>. All Rights Reserved.
+        </div>
+    </div>
+</footer>
 
-        // Navbar Scroll Effect
-        const navbar = document.getElementById('mainNavbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-        // Close mobile menu on click
-        const navLinks = document.querySelectorAll('.nav-link');
-        const menuToggle = document.querySelector('.navbar-collapse');
-        const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false});
-        
-        navLinks.forEach((l) => {
-            l.addEventListener('click', () => {
-                if(menuToggle.classList.contains('show')) {
-                    bsCollapse.hide();
-                }
-            })
-        });
+<script>
+AOS.init({ duration:1000, once:true });
 
-
-        <script>
-    // Initialize AOS
-    AOS.init({
-        duration: 1000,
-        easing: 'ease-in-out',
-        once: true,
-        mirror: false
-    });
-
-    // Navbar Scroll Effect
-    const navbar = document.getElementById('mainNavbar');
+const navbar = document.getElementById('mainNavbar');
+if (navbar) {
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
+        navbar.classList.toggle('scrolled', window.scrollY > 20);
     });
+}
 
-    // Close mobile menu on click
-    const navLinks = document.querySelectorAll('.nav-link');
-    const menuToggle = document.querySelector('.navbar-collapse');
-    const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false});
-    
-    navLinks.forEach((l) => {
-        l.addEventListener('click', () => {
-            if(menuToggle.classList.contains('show')) {
-                bsCollapse.hide();
-            }
+const navLinks = document.querySelectorAll('.nav-link');
+const menuToggle = document.querySelector('.navbar-collapse');
+if (menuToggle) {
+    const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle:false });
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (menuToggle.classList.contains('show')) bsCollapse.hide();
         });
     });
-
-    // ===== AJAX contact form: send to FormSubmit, show local success message =====
-    document.addEventListener('DOMContentLoaded', () => {
-        const form = document.getElementById('contactForm');
-        const successAlert = document.getElementById('contactSuccess');
-        const errorAlert = document.getElementById('contactError');
-        const submitButton = form ? form.querySelector('button[type="submit"]') : null;
-
-        if (!form) return;
-
-        form.addEventListener('submit', function (e) {
-            e.preventDefault(); // stop normal navigation to FormSubmit page
-
-            // simple bot check: if honeypot filled, don't send
-            const honey = form.querySelector('input[name="_honey"]');
-            if (honey && honey.value) {
-                return; // likely bot, silently ignore
-            }
-
-            // disable button while sending
-            if (submitButton) {
-                submitButton.disabled = true;
-                submitButton.innerHTML = 'Sending... <i class="bi bi-arrow-repeat"></i>';
-            }
-
-            fetch('https://formsubmit.co/ajax/bilalshajamali@gmail.com', {
-                method: 'POST',
-                body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (!response.ok) throw new Error('Network response was not ok');
-                return response.json();
-            })
-            .then(data => {
-                // show success
-                if (successAlert) successAlert.classList.remove('d-none');
-                if (errorAlert) errorAlert.classList.add('d-none');
-                form.reset();
-            })
-            .catch(error => {
-                // show error
-                if (successAlert) successAlert.classList.add('d-none');
-                if (errorAlert) errorAlert.classList.remove('d-none');
-                console.error('Form submit error:', error);
-            })
-            .finally(() => {
-                if (submitButton) {
-                    submitButton.disabled = false;
-                    submitButton.innerHTML = 'Send Message <i class="bi bi-send"></i>';
-                }
-            });
-        });
-    });
+}
 </script>
-
-    
-    </script>
-</body>
-</html>
