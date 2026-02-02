@@ -293,6 +293,51 @@
             flex-shrink: 0;
         }
 
+
+
+                .contact-submit-btn {
+            border-radius: 999px;
+            background-color: var(--slate-900);
+            color: #fff;
+            padding: 0.75rem 2.5rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.03em;
+            border: 1px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            box-shadow: 0 12px 30px -15px rgba(15, 23, 42, 0.8);
+            transition:
+                background-color 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .contact-submit-btn:hover {
+            background-color: var(--slate-800);
+            border-color: var(--emerald-500);
+            box-shadow: 0 18px 40px -18px rgba(15, 23, 42, 0.9);
+            transform: translateY(-1px);
+        }
+
+        .contact-submit-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 8px 22px -12px rgba(15, 23, 42, 0.85);
+        }
+
+        .contact-submit-btn:focus-visible {
+            outline: 2px solid var(--emerald-500);
+            outline-offset: 2px;
+        }
+
+        .contact-submit-btn i {
+            font-size: 1rem;
+        }
+
+
+
         /* Footer */
         .social-link {
             width: 2.5rem; height: 2.5rem;
@@ -725,96 +770,60 @@
 
 
 
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-white">
-        <div class="container" data-aos="fade-up">
-            <div class="bg-white rounded-4xl shadow-custom-2xl overflow-hidden d-flex flex-column flex-lg-row">
-                
-                <!-- Form Side -->
-                <div class="col-lg-7 p-4 p-lg-5 d-flex flex-column justify-content-center">
-                    <div class="mb-5">
-                        <h2 class="fw-bold text-slate-900 mb-2 h2">Get in Touch</h2>
-                        <p class="text-slate-500">Send a message for invitations or scholarly inquiries.</p>
-                    </div>
-
-                    <!-- 
-                       UPDATED FORM 
-                       1. action="...": Points to the email service.
-                       2. method="POST": Required for sending data.
-                    -->
-                        <form action="https://formsubmit.co/shaajamali9744@gmail.com" method="POST">
-                            
-                            <input type="hidden" name="_subject" value="New Message from Bilalsha Website">
-                            <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_template" value="table">
-                            <div class="row g-3 mb-3">
-                                <div class="col-md-6">
-                                    <label for="name" class="form-label fw-medium text-slate-700 small">Your Name</label>
-                                    <input type="text" name="name" id="name" class="contact-input" placeholder="Name" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="email" class="form-label fw-medium text-slate-700 small">Your Email</label>
-                                    <input type="email" name="email" id="email" class="contact-input" placeholder="Email" required>
-                                </div>
-                            </div>
-                            
-                            <div class="mb-3">
-                                <label for="subject" class="form-label fw-medium text-slate-700 small">Subject</label>
-                                <input type="text" name="subject" id="subject" class="contact-input" placeholder="Subject" required>
-                            </div>
-                            
-                            <div class="mb-4">
-                                <label for="message" class="form-label fw-medium text-slate-700 small">Message</label>
-                                <textarea name="message" id="message" rows="4" class="contact-input" placeholder="Message" required></textarea>
-                            </div>
-
-                            <button type="submit" class="btn bg-slate-900 text-white rounded-pill w-100 py-3 fw-bold">
-                                Send Message <i class="bi bi-send"></i>
-                            </button>
-                        </form>
+   <!-- Contact Section (Form only, no phone/map/location) -->
+<section id="contact" class="section-padding bg-white">
+    <div class="container" data-aos="fade-up">
+        <div class="bg-white rounded-4xl shadow-custom-2xl overflow-hidden">
+            
+            <!-- Form Block -->
+            <div class="p-4 p-lg-5 d-flex flex-column justify-content-center">
+                <div class="mb-5">
+                    <h2 class="fw-bold text-slate-900 mb-2 h2">Get in Touch</h2>
+                    <p class="text-slate-500">Send a message for invitations or scholarly inquiries.</p>
                 </div>
 
-                <!-- Info Side (Unchanged) -->
-                <div class="col-lg-5 bg-slate-900 text-white p-4 p-lg-5 position-relative d-flex flex-column justify-content-between overflow-hidden">
-                    <div class="contact-decoration-1"></div>
-                    <div class="contact-decoration-2"></div>
+                                    <form action="https://formsubmit.co/bilalshajamali@gmail.com" method="POST">
+                        <!-- FormSubmit configuration -->
+                        <input type="hidden" name="_subject" value="New Message from Bilalsha Website">
+                        <input type="hidden" name="_captcha" value="true">
+                        <input type="hidden" name="_template" value="table">
 
-                    <div class="position-relative z-2">
-                        <h3 class="h3 fw-light mb-4 pb-3 border-bottom border-secondary border-opacity-25">Contact Info</h3>
-                        
-                        <div class="d-flex flex-column gap-4">
-                            <div class="d-flex align-items-start gap-3">
-                                <div class="contact-icon-box"><i class="bi bi-geo-alt"></i></div>
-                                <div>
-                                    <h6 class="text-white text-opacity-50 small fw-bold text-uppercase mb-1">Location</h6>
-                                    <p class="fs-5 mb-0">Tanur, Kerala, India</p>
-                                </div>
+                        <!-- Optional: anti-bot honeypot (invisible to users, helps block spam) -->
+                        <input type="text" name="_honey" style="display:none">
+
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label fw-medium text-slate-700 small">Your Name</label>
+                                <input type="text" name="name" id="name" class="contact-input" placeholder="Name" required>
                             </div>
-                            <div class="d-flex align-items-start gap-3">
-                                <div class="contact-icon-box"><i class="bi bi-whatsapp"></i></div>
-                                <div>
-                                    <h6 class="text-white text-opacity-50 small fw-bold text-uppercase mb-1">WhatsApp</h6>
-                                    <p class="fs-5 mb-0">+91 9895742364</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start gap-3">
-                                <div class="contact-icon-box"><i class="bi bi-envelope"></i></div>
-                                <div>
-                                    <h6 class="text-white text-opacity-50 small fw-bold text-uppercase mb-1">Email</h6>
-                                    <p class="fs-5 mb-0">shaajamali9744@gmail.com</p>
-                                </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label fw-medium text-slate-700 small">Your Email</label>
+                                <input type="email" name="email" id="email" class="contact-input" placeholder="Email" required>
                             </div>
                         </div>
-                    </div>
+                        
+                        <div class="mb-3">
+                            <label for="subject" class="form-label fw-medium text-slate-700 small">Subject</label>
+                            <input type="text" name="subject" id="subject" class="contact-input" placeholder="Subject" required>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="form-label fw-medium text-slate-700 small">Message</label>
+                            <textarea name="message" id="message" rows="4" class="contact-input" placeholder="Message" required></textarea>
+                        </div>
 
-                    <div class="mt-5 position-relative z-2 rounded-2xl overflow-hidden bg-slate-800" style="height: 200px;">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31306.38255855719!2d75.85731861175825!3d10.977740648511626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7be8b8dde2c4f%3A0xf511b9b2a39341f8!2sTanur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1721381234567" 
-                                width="100%" height="100%" style="border:0; filter: grayscale(1) invert(0.9);" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
+                        <div class="d-flex justify-content-center justify-content-md-end mt-2">
+                            <button type="submit" class="btn contact-submit-btn">
+                                Send Message
+                                <i class="bi bi-send"></i>
+                            </button>
+                        </div>
+                    </form>
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     
 
